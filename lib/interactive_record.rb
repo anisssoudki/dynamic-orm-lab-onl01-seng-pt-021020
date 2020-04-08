@@ -52,6 +52,6 @@ def self.find_by_name(name)
   DB[:conn].execute(sql, name)
 end
  def self.find_by(attributes)
-        DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE #{attributes.keys[0][0..-1]} = '#{attributes.values[0]}'")
+    DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE #{attribute.keys[0][0..-1]} = '#{attributes.values[0]}'")
     end
 end
